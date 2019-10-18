@@ -13,6 +13,7 @@ namespace Fightersimulator
             Fighter A = new Fighter();
             Fighter B = new Fighter();
 
+            //ger namn åt spelaren
             Console.Write("Välj namne på spelare 1:");
             string namnA = A.GiveName();
             Console.Write("Välj namne på spelare 2:");
@@ -26,6 +27,7 @@ namespace Fightersimulator
             bool playerBisAlive = B.isAlive();
 
             while(playerAisAlive == true && playerBisAlive == true)
+                //Spelare attackerar om båda lever
             {
                 playerBisAlive = B.isAlive();
                 int attack = A.Attack();
@@ -42,6 +44,7 @@ namespace Fightersimulator
                 Console.ReadKey();
             }
 
+            //Skriver vilekn spelare som vann
             if (playerAisAlive == true && playerBisAlive == false)
             {
                 Console.WriteLine(namnA + " vann!");

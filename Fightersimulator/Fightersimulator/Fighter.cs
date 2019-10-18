@@ -21,6 +21,7 @@ namespace Fightersimulator
         }
             
 
+        //random generatorn för dmg
         public int Attack()
         {
             Random generator = new Random();
@@ -29,6 +30,7 @@ namespace Fightersimulator
             return damage;
         }
 
+        //Hurtmetoden drar hp och gör så hp inte går under 0
         public void Hurt(int amount)
         {
             hp = hp - amount;
@@ -40,6 +42,7 @@ namespace Fightersimulator
 
         }
 
+        //skriver current hp
         public int GetHp()
         {
             Console.WriteLine(name + " har nu " + hp + "hp kvar.");
@@ -47,6 +50,7 @@ namespace Fightersimulator
             return hp;
         }
 
+        //kollar om man lever eller inte
         public bool isAlive()
         {
             bool alive = false;
